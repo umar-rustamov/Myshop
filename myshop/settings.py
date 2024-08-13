@@ -106,6 +106,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+STATIC_ROOT = BASE_DIR / 'static'
 
 CART_SESSION_ID = 'cart'
 # Internationalization
@@ -131,7 +132,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
 
 # Настроечные параметры Stripe
 STRIPE_PUBLISHABLE_KEY = 'pk_test_51PlXLW099U65rMIe3MPLxGAy7IgpMt3sHz91IfGPHA5xpkMoWpd6ohg2n7tor8svO0xZvGsbeF9WSe2KgYZQSNd700JyTW4REb' # Публикуемый ключ
