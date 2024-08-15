@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'shop',
     'cart',
     'orders',
-    'payment'
+    'payment',
+    'coupons',
 ]
 
 MIDDLEWARE = [
@@ -136,6 +137,12 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # Настроечные параметры Stripe
 STRIPE_PUBLISHABLE_KEY = 'pk_test_51PlXLW099U65rMIe3MPLxGAy7IgpMt3sHz91IfGPHA5xpkMoWpd6ohg2n7tor8svO0xZvGsbeF9WSe2KgYZQSNd700JyTW4REb' # Публикуемый ключ
 STRIPE_SECRET_KEY = 'sk_test_51PlXLW099U65rMIeQwhNqSEa1wZ6JoSIu1QwDt838qepYCOvymqYMT8WIxJBprIEbhDLOdxbT5FkEpJFP8zHcQfm00flBl6Hqv'
+
 # Секретный ключ
 STRIPE_API_VERSION = '2022-08-01'
 STRIPE_WEBHOOK_SECRET = ''
+
+# настроечные параметры Redis
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
+REDIS_DB = 1
