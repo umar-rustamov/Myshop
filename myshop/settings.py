@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-d)or6go*7mxjiu5nx-sg^coqgc0bzfj8)=b@#^@1g2f2%e%1@f'
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "change-me-in-production")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -148,12 +148,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Настроечные параметры Stripe
-STRIPE_PUBLISHABLE_KEY = 'pk_test_51PlXLW099U65rMIe3MPLxGAy7IgpMt3sHz91IfGPHA5xpkMoWpd6ohg2n7tor8svO0xZvGsbeF9WSe2KgYZQSNd700JyTW4REb' # Публикуемый ключ
-STRIPE_SECRET_KEY = 'sk_test_51PlXLW099U65rMIeQwhNqSEa1wZ6JoSIu1QwDt838qepYCOvymqYMT8WIxJBprIEbhDLOdxbT5FkEpJFP8zHcQfm00flBl6Hqv'
+STRIPE_PUBLISHABLE_KEY = os.environ.get("STRIPE_PUBLISHABLE_KEY", "") # Публикуемый ключ
+STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY", "")
 
 # Секретный ключ
 STRIPE_API_VERSION = '2022-08-01'
-STRIPE_WEBHOOK_SECRET = ''
+STRIPE_WEBHOOK_SECRET = os.environ.get("STRIPE_WEBHOOK_SECRET", "")
 
 # настроечные параметры Redis
 REDIS_HOST = 'localhost'
