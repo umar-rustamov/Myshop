@@ -72,7 +72,7 @@ docker run -d -p 5672:5672 rabbitmq
 Install and run the project:
 
 ```bash
-git clone https://github.com/Umar37-max/Myshop.git
+git clone https://github.com/umar-rustamov/Myshop.git
 cd Myshop
 
 python -m venv .venv
